@@ -13,6 +13,8 @@
 		009CB9ED208DF3A900B0C2C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 009CB9EC208DF3A900B0C2C7 /* Assets.xcassets */; };
 		009CB9F0208DF3A900B0C2C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009CB9EE208DF3A900B0C2C7 /* LaunchScreen.storyboard */; };
 		009CB9F3208DF3A900B0C2C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9F2208DF3A900B0C2C7 /* main.m */; };
+		009CB9FC208DF3FB00B0C2C7 /* SequenceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9FB208DF3FB00B0C2C7 /* SequenceList.m */; };
+		00B49A5C209C28C3007C2B8E /* Recursion.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B49A5B209C28C3007C2B8E /* Recursion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		009CB9EF208DF3A900B0C2C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		009CB9F1208DF3A900B0C2C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		009CB9F2208DF3A900B0C2C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		009CB9FA208DF3FB00B0C2C7 /* SequenceList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SequenceList.h; sourceTree = "<group>"; };
+		009CB9FB208DF3FB00B0C2C7 /* SequenceList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequenceList.m; sourceTree = "<group>"; };
+		00B49A5A209C28C3007C2B8E /* Recursion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recursion.h; sourceTree = "<group>"; };
+		00B49A5B209C28C3007C2B8E /* Recursion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recursion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		009CB9E2208DF3A800B0C2C7 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				009CB9F9208DF3B400B0C2C7 /* Algorithms */,
 				009CB9E3208DF3A800B0C2C7 /* AppDelegate.h */,
 				009CB9E4208DF3A800B0C2C7 /* AppDelegate.m */,
 				009CB9E6208DF3A800B0C2C7 /* ViewController.h */,
@@ -67,6 +74,17 @@
 				009CB9EE208DF3A900B0C2C7 /* LaunchScreen.storyboard */,
 				009CB9F1208DF3A900B0C2C7 /* Info.plist */,
 				009CB9F2208DF3A900B0C2C7 /* main.m */,
+			);
+			path = Algorithms;
+			sourceTree = "<group>";
+		};
+		009CB9F9208DF3B400B0C2C7 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				009CB9FA208DF3FB00B0C2C7 /* SequenceList.h */,
+				009CB9FB208DF3FB00B0C2C7 /* SequenceList.m */,
+				00B49A5A209C28C3007C2B8E /* Recursion.h */,
+				00B49A5B209C28C3007C2B8E /* Recursion.m */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -143,7 +161,9 @@
 			files = (
 				009CB9E8208DF3A800B0C2C7 /* ViewController.m in Sources */,
 				009CB9F3208DF3A900B0C2C7 /* main.m in Sources */,
+				009CB9FC208DF3FB00B0C2C7 /* SequenceList.m in Sources */,
 				009CB9E5208DF3A800B0C2C7 /* AppDelegate.m in Sources */,
+				00B49A5C209C28C3007C2B8E /* Recursion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

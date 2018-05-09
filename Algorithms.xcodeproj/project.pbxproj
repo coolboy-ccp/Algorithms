@@ -15,6 +15,7 @@
 		009CB9F3208DF3A900B0C2C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9F2208DF3A900B0C2C7 /* main.m */; };
 		009CB9FC208DF3FB00B0C2C7 /* SequenceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9FB208DF3FB00B0C2C7 /* SequenceList.m */; };
 		00B49A5C209C28C3007C2B8E /* Recursion.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B49A5B209C28C3007C2B8E /* Recursion.m */; };
+		00EC0075209FEFA600415222 /* Sorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EC0074209FEFA600415222 /* Sorts.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		009CB9FB208DF3FB00B0C2C7 /* SequenceList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequenceList.m; sourceTree = "<group>"; };
 		00B49A5A209C28C3007C2B8E /* Recursion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recursion.h; sourceTree = "<group>"; };
 		00B49A5B209C28C3007C2B8E /* Recursion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recursion.m; sourceTree = "<group>"; };
+		00EC0073209FEFA600415222 /* Sorts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sorts.h; sourceTree = "<group>"; };
+		00EC0074209FEFA600415222 /* Sorts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sorts.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				009CB9FB208DF3FB00B0C2C7 /* SequenceList.m */,
 				00B49A5A209C28C3007C2B8E /* Recursion.h */,
 				00B49A5B209C28C3007C2B8E /* Recursion.m */,
+				00EC0073209FEFA600415222 /* Sorts.h */,
+				00EC0074209FEFA600415222 /* Sorts.m */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				009CB9E8208DF3A800B0C2C7 /* ViewController.m in Sources */,
 				009CB9F3208DF3A900B0C2C7 /* main.m in Sources */,
 				009CB9FC208DF3FB00B0C2C7 /* SequenceList.m in Sources */,
+				00EC0075209FEFA600415222 /* Sorts.m in Sources */,
 				009CB9E5208DF3A800B0C2C7 /* AppDelegate.m in Sources */,
 				00B49A5C209C28C3007C2B8E /* Recursion.m in Sources */,
 			);

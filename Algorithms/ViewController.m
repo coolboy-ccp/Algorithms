@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SequenceList.h"
 #import "Recursion.h"
+#import "Sorts.h"
 
 typedef NSArray <NSDictionary<NSString *, NSArray *> *> * Test;
 typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
@@ -30,7 +31,8 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
     if (!_tests) {
         NSArray *sequenceTest = @[@"insert", @"delete", @"elementAt", @"locateElement"];
         NSArray *recursionTest = @[@"hanoi", @"fibonacci", @"fibonacci_tail", @"fibonacci_while", @"factorial"];
-        _tests = @[@{@"sequence":sequenceTest},@{@"recursion":recursionTest}];
+        NSArray *sortTest = @[@"bubble", @"fast", @"insertion", @"shell", @"select", @"heap", @"merge"];
+        _tests = @[@{@"sequence":sequenceTest},@{@"recursion":recursionTest},@{@"sort":sortTest}];
     }
     return _tests;
 }
@@ -39,11 +41,11 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
     if (!_testActions) {
         NSArray *sequenceActions = @[^{testInsert();}, ^{testDelete();}, ^{testElementAt();}, ^{testLocateElement();}];
         NSArray *recursionActions = @[^{testHanoi();},^{testFibonacci();},^{testFibonacci_tail();},^{testFibonacci_while();},^{testFactorial();}];
-        _testActions = @[sequenceActions,recursionActions];
+        NSArray *sortActions = @[^{testBubbleSort();}, ^{testFastSort();}, ^{testInsertionSort();}, ^{testShellSort();}, ^{testSelectSort();}, ^{testHeapSort();}, ^{testMergeSort();}];
+        _testActions = @[sequenceActions,recursionActions,sortActions];
     }
     return _testActions;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -76,7 +78,8 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    void(^action)(void) = _testActions[indexPath.section][indexPath.row];
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
+    void(^action)(void) = self.testActions[indexPath.section][indexPath.row];
     action();
 }
 

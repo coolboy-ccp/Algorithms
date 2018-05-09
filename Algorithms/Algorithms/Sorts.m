@@ -193,8 +193,52 @@ void mergeSort(NSMutableArray <NSNumber *> *array, Compare compare) {
     
 }
 
+int digit(NSNumber *element, int d, Compare compare) {
+    int a = [element intValue];
+    int base = 1;
+    d = d - 1;
+    while (d > 0) {
+        base = 10 * base;
+        d--;
+    }
+    return abs(compare(@(1), @(2)) * 9 -  (a / base % 10));
+}
+
 //
 void radixSort(NSMutableArray <NSNumber *> *array, Compare compare) {
+    //获取数组中最大数的位数
+    int max = [[array valueForKeyPath:@"@max.intValue"] intValue];
+    int count = 1;
+    while (max / 10) {
+        count ++;
+        max = max / 10;
+    }
+    
+    int radix = 10;
+    int i, j = 0;
+    int counts[radix];
+    NSMutableArray <NSNumber *> *buckets = [NSMutableArray arrayWithArray:array.copy];
+    for (int d = 1; d <= count; d++) {
+        for (int i = 0; i < radix; i++) {
+            counts[i] = 0;
+        }
+        for (i = 0; i < array.count; i ++) {
+            j = digit(array[i], d, compare);
+            counts[j] ++;
+        }
+        
+        for (i = 1; i < radix; i ++) {
+            counts[i] = counts[i] + counts[i - 1];
+        }
+        for (i = (int)array.count - 1; i >= 0 ; i --) {
+            j = digit(array[i], d, compare);
+            buckets[counts[j] - 1] = array[i];
+            counts[j]--;
+        }
+        for (i = 0, j = 0; i < array.count; i++, j++) {
+            array[i] = buckets[j];
+        }
+    }
     
 }
 
@@ -252,4 +296,12 @@ void testMergeSort() {
     NSLog(@"testMergeSort-ascending: %@", array);
     mergeSort(array, descending);
     NSLog(@"testMergeSort-descending: %@", array);
+}
+
+void testRadixSort() {
+    NSMutableArray *array = @[@(6), @(100), @(8), @(19), @(1), @(999), @(2), @(7)].mutableCopy;
+    radixSort(array, ascending);
+    NSLog(@"testRadixSort-ascending: %@", array);
+    radixSort(array, descending);
+    NSLog(@"testRadixSort-descending: %@", array);
 }

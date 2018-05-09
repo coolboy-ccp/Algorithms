@@ -15,3 +15,4 @@ void testShellSort(void);
 void testSelectSort(void);
 void testHeapSort(void);
 void testMergeSort(void);
+void testRadixSort(void);

@@ -8,8 +8,6 @@
 
 #import "Sorts.h"
 
-typedef BOOL (^Compare)(NSNumber *e1, NSNumber *e2);
-
 Compare descending = ^BOOL(NSNumber *e1, NSNumber *e2) {
     return [e1 intValue] < [e2 intValue];
 };
@@ -69,6 +67,10 @@ void fastSort(NSMutableArray<NSNumber *> *array, NSInteger leftIdx, NSInteger ri
         fastSort(array, left + 1, rightIdx, compare);
     }
     
+}
+
+void fastSorting(NSMutableArray <NSNumber *> *array, Compare compare) {
+    fastSort(array, 0, array.count - 1, compare);
 }
 
 //效率O(n^2) 空间O(1)

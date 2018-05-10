@@ -10,6 +10,7 @@
 #import "SequenceList.h"
 #import "Recursion.h"
 #import "Sorts.h"
+#import "SearchLinearList.h"
 
 typedef NSArray <NSDictionary<NSString *, NSArray *> *> * Test;
 typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
@@ -32,7 +33,8 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
         NSArray *sequenceTest = @[@"insert", @"delete", @"elementAt", @"locateElement"];
         NSArray *recursionTest = @[@"hanoi", @"fibonacci", @"fibonacci_tail", @"fibonacci_while", @"factorial"];
         NSArray *sortTest = @[@"bubble", @"fast", @"insertion", @"shell", @"select", @"heap", @"merge", @"radix"];
-        _tests = @[@{@"sequence":sequenceTest},@{@"recursion":recursionTest},@{@"sort":sortTest}];
+        NSArray *searchLinearListTest = @[@"order", @"binary", @"block"];
+        _tests = @[@{@"sequence":sequenceTest},@{@"recursion":recursionTest},@{@"sort":sortTest},@{@"searchLinerarList":searchLinearListTest}];
     }
     return _tests;
 }
@@ -42,7 +44,8 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
         NSArray *sequenceActions = @[^{testInsert();}, ^{testDelete();}, ^{testElementAt();}, ^{testLocateElement();}];
         NSArray *recursionActions = @[^{testHanoi();},^{testFibonacci();},^{testFibonacci_tail();},^{testFibonacci_while();},^{testFactorial();}];
         NSArray *sortActions = @[^{testBubbleSort();}, ^{testFastSort();}, ^{testInsertionSort();}, ^{testShellSort();}, ^{testSelectSort();}, ^{testHeapSort();}, ^{testMergeSort();}, ^{testRadixSort();}];
-        _testActions = @[sequenceActions,recursionActions,sortActions];
+        NSArray *searchLinearListActions = @[^{testOrderSearch();}, ^{testBinarySearch();}, ^{testBlockSearch();}];
+        _testActions = @[sequenceActions,recursionActions,sortActions, searchLinearListActions];
     }
     return _testActions;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001F46F120A3DB02006E07F1 /* SearchLinearList.m in Sources */ = {isa = PBXBuildFile; fileRef = 001F46F020A3DB02006E07F1 /* SearchLinearList.m */; };
 		009CB9E5208DF3A800B0C2C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9E4208DF3A800B0C2C7 /* AppDelegate.m */; };
 		009CB9E8208DF3A800B0C2C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9E7208DF3A800B0C2C7 /* ViewController.m */; };
 		009CB9EB208DF3A800B0C2C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009CB9E9208DF3A800B0C2C7 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		001F46EF20A3DB02006E07F1 /* SearchLinearList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchLinearList.h; sourceTree = "<group>"; };
+		001F46F020A3DB02006E07F1 /* SearchLinearList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchLinearList.m; sourceTree = "<group>"; };
 		009CB9E0208DF3A800B0C2C7 /* Algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		009CB9E3208DF3A800B0C2C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		009CB9E4208DF3A800B0C2C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				00B49A5B209C28C3007C2B8E /* Recursion.m */,
 				00EC0073209FEFA600415222 /* Sorts.h */,
 				00EC0074209FEFA600415222 /* Sorts.m */,
+				001F46EF20A3DB02006E07F1 /* SearchLinearList.h */,
+				001F46F020A3DB02006E07F1 /* SearchLinearList.m */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				009CB9E8208DF3A800B0C2C7 /* ViewController.m in Sources */,
+				001F46F120A3DB02006E07F1 /* SearchLinearList.m in Sources */,
 				009CB9F3208DF3A900B0C2C7 /* main.m in Sources */,
 				009CB9FC208DF3FB00B0C2C7 /* SequenceList.m in Sources */,
 				00EC0075209FEFA600415222 /* Sorts.m in Sources */,

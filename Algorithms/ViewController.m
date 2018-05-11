@@ -26,17 +26,6 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(4);
-    for (int i = 0; i < 100; i ++) {
-        dispatch_semaphore_wait(semaphore, 10000);
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(6 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                NSLog(@"%d------",i);
-                dispatch_semaphore_signal(semaphore);
-            });
-        });
-        
-    }
     [_testTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"testCell"];
 }
 

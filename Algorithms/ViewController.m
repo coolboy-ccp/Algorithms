@@ -11,6 +11,7 @@
 #import "Recursion.h"
 #import "Sorts.h"
 #import "SearchLinearList.h"
+#import "BitSet.h"
 
 typedef NSArray <NSDictionary<NSString *, NSArray *> *> * Test;
 typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
@@ -25,6 +26,17 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(4);
+    for (int i = 0; i < 100; i ++) {
+        dispatch_semaphore_wait(semaphore, 10000);
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(6 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                NSLog(@"%d------",i);
+                dispatch_semaphore_signal(semaphore);
+            });
+        });
+        
+    }
     [_testTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"testCell"];
 }
 
@@ -34,7 +46,8 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
         NSArray *recursionTest = @[@"hanoi", @"fibonacci", @"fibonacci_tail", @"fibonacci_while", @"factorial"];
         NSArray *sortTest = @[@"bubble", @"fast", @"insertion", @"shell", @"select", @"heap", @"merge", @"radix"];
         NSArray *searchLinearListTest = @[@"order", @"binary", @"block"];
-        _tests = @[@{@"sequence":sequenceTest},@{@"recursion":recursionTest},@{@"sort":sortTest},@{@"searchLinerarList":searchLinearListTest}];
+        NSArray *bitset = @[@"bitset", @"multiBitset"];
+        _tests = @[@{@"sequence":sequenceTest},@{@"recursion":recursionTest},@{@"sort":sortTest},@{@"searchLinerarList":searchLinearListTest},@{@"bitset": bitset}];
     }
     return _tests;
 }
@@ -45,7 +58,8 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
         NSArray *recursionActions = @[^{testHanoi();},^{testFibonacci();},^{testFibonacci_tail();},^{testFibonacci_while();},^{testFactorial();}];
         NSArray *sortActions = @[^{testBubbleSort();}, ^{testFastSort();}, ^{testInsertionSort();}, ^{testShellSort();}, ^{testSelectSort();}, ^{testHeapSort();}, ^{testMergeSort();}, ^{testRadixSort();}];
         NSArray *searchLinearListActions = @[^{testOrderSearch();}, ^{testBinarySearch();}, ^{testBlockSearch();}];
-        _testActions = @[sequenceActions,recursionActions,sortActions, searchLinearListActions];
+        NSArray *bitsetActions = @[^{testBitSet();}, ^{testMultiBitSet();}];
+        _testActions = @[sequenceActions,recursionActions,sortActions, searchLinearListActions, bitsetActions];
     }
     return _testActions;
 }

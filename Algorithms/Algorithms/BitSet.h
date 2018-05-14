@@ -11,3 +11,4 @@
 
 void testMultiBitSet(void);
 void testBitSet(void);
+void testEmptyNum(void);

@@ -35,7 +35,7 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
         NSArray *recursionTest = @[@"hanoi", @"fibonacci", @"fibonacci_tail", @"fibonacci_while", @"factorial"];
         NSArray *sortTest = @[@"bubble", @"fast", @"insertion", @"shell", @"select", @"heap", @"merge", @"radix"];
         NSArray *searchLinearListTest = @[@"order", @"binary", @"block"];
-        NSArray *bitset = @[@"bitset", @"multiBitset"];
+        NSArray *bitset = @[@"bitset", @"multiBitset", @"emptyBitset"];
         _tests = @[@{@"sequence":sequenceTest},@{@"recursion":recursionTest},@{@"sort":sortTest},@{@"searchLinerarList":searchLinearListTest},@{@"bitset": bitset}];
     }
     return _tests;
@@ -47,7 +47,7 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
         NSArray *recursionActions = @[^{testHanoi();},^{testFibonacci();},^{testFibonacci_tail();},^{testFibonacci_while();},^{testFactorial();}];
         NSArray *sortActions = @[^{testBubbleSort();}, ^{testFastSort();}, ^{testInsertionSort();}, ^{testShellSort();}, ^{testSelectSort();}, ^{testHeapSort();}, ^{testMergeSort();}, ^{testRadixSort();}];
         NSArray *searchLinearListActions = @[^{testOrderSearch();}, ^{testBinarySearch();}, ^{testBlockSearch();}];
-        NSArray *bitsetActions = @[^{testBitSet();}, ^{testMultiBitSet();}];
+        NSArray *bitsetActions = @[^{testBitSet();}, ^{testMultiBitSet();}, ^{testEmptyNum();}];
         _testActions = @[sequenceActions,recursionActions,sortActions, searchLinearListActions, bitsetActions];
     }
     return _testActions;

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		001F46F120A3DB02006E07F1 /* SearchLinearList.m in Sources */ = {isa = PBXBuildFile; fileRef = 001F46F020A3DB02006E07F1 /* SearchLinearList.m */; };
+		00412D2120A9279D0084A22E /* HashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 00412D2020A9279D0084A22E /* HashTable.m */; };
 		004513D120A571AD002347CA /* BitSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 004513D020A571AD002347CA /* BitSet.m */; };
 		009CB9E5208DF3A800B0C2C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9E4208DF3A800B0C2C7 /* AppDelegate.m */; };
 		009CB9E8208DF3A800B0C2C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9E7208DF3A800B0C2C7 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		001F46EF20A3DB02006E07F1 /* SearchLinearList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchLinearList.h; sourceTree = "<group>"; };
 		001F46F020A3DB02006E07F1 /* SearchLinearList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchLinearList.m; sourceTree = "<group>"; };
+		00412D1F20A9279D0084A22E /* HashTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
+		00412D2020A9279D0084A22E /* HashTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HashTable.m; sourceTree = "<group>"; };
 		004513CF20A571AD002347CA /* BitSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitSet.h; sourceTree = "<group>"; };
 		004513D020A571AD002347CA /* BitSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitSet.m; sourceTree = "<group>"; };
 		009CB9E0208DF3A800B0C2C7 /* Algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +103,8 @@
 				001F46F020A3DB02006E07F1 /* SearchLinearList.m */,
 				004513CF20A571AD002347CA /* BitSet.h */,
 				004513D020A571AD002347CA /* BitSet.m */,
+				00412D1F20A9279D0084A22E /* HashTable.h */,
+				00412D2020A9279D0084A22E /* HashTable.m */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 				009CB9FC208DF3FB00B0C2C7 /* SequenceList.m in Sources */,
 				00EC0075209FEFA600415222 /* Sorts.m in Sources */,
 				009CB9E5208DF3A800B0C2C7 /* AppDelegate.m in Sources */,
+				00412D2120A9279D0084A22E /* HashTable.m in Sources */,
 				004513D120A571AD002347CA /* BitSet.m in Sources */,
 				00B49A5C209C28C3007C2B8E /* Recursion.m in Sources */,
 			);

@@ -21,7 +21,7 @@ bool hasNumber(int val, char *bitset) {
     int bit_pos = val % 8;
     int temp = 1 << bit_pos;
     char cur_char = bitset[char_pos];
-    return temp &= cur_char;
+    return temp & cur_char;
 }
 
 void testBitSet() {
@@ -87,4 +87,26 @@ void testMultiBitSet() {
     for (int i = 0; i < 5; i ++) {
         multiHasNumber(i, bitset, repeat);
     }
+}
+
+bool emptyBitSet(int val, char *bitset) {
+    int char_pos = val / 8;
+    int bit_pos = val % 8;
+    int temp = 1 << bit_pos;
+    char cur_char = bitset[char_pos];
+    return temp ^ (cur_char & temp);
+}
+
+void testEmptyNum() {
+    char bitset[1024];
+    int array[] = {0,2,3,8,0,7,8};
+    for (int i = 0; i < 9; i ++) {
+        setBitSet(array[i], bitset);
+    }
+    for (int i = 0; i < 9; i ++) {
+        if (emptyBitSet(i, bitset)) {
+            printf("%d----",i);
+        }
+    }
+    
 }

@@ -12,6 +12,7 @@
 #import "Sorts.h"
 #import "SearchLinearList.h"
 #import "BitSet.h"
+#import "FuzzyMatching.h"
 
 typedef NSArray <NSDictionary<NSString *, NSArray *> *> * Test;
 typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
@@ -36,7 +37,8 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
         NSArray *sortTest = @[@"bubble", @"fast", @"insertion", @"shell", @"select", @"heap", @"merge", @"radix"];
         NSArray *searchLinearListTest = @[@"order", @"binary", @"block"];
         NSArray *bitset = @[@"bitset", @"multiBitset", @"emptyBitset"];
-        _tests = @[@{@"sequence":sequenceTest},@{@"recursion":recursionTest},@{@"sort":sortTest},@{@"searchLinerarList":searchLinearListTest},@{@"bitset": bitset}];
+        NSArray *fuzzyTest = @[@"getNext", @"KMP"];
+        _tests = @[@{@"sequence":sequenceTest},@{@"recursion":recursionTest},@{@"sort":sortTest},@{@"searchLinerarList":searchLinearListTest},@{@"bitset": bitset}, @{@"fuzzy":fuzzyTest}];
     }
     return _tests;
 }
@@ -48,7 +50,8 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
         NSArray *sortActions = @[^{testBubbleSort();}, ^{testFastSort();}, ^{testInsertionSort();}, ^{testShellSort();}, ^{testSelectSort();}, ^{testHeapSort();}, ^{testMergeSort();}, ^{testRadixSort();}];
         NSArray *searchLinearListActions = @[^{testOrderSearch();}, ^{testBinarySearch();}, ^{testBlockSearch();}];
         NSArray *bitsetActions = @[^{testBitSet();}, ^{testMultiBitSet();}, ^{testEmptyNum();}];
-        _testActions = @[sequenceActions,recursionActions,sortActions, searchLinearListActions, bitsetActions];
+        NSArray *fuzzyActions = @[^{testGetNext();}, ^{testKMFMatch();}];
+        _testActions = @[sequenceActions,recursionActions,sortActions, searchLinearListActions, bitsetActions,fuzzyActions];
     }
     return _testActions;
 }

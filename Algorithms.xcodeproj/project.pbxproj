@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001B4B1720ABCC6200941209 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 001B4B1620ABCC6200941209 /* LinkedList.m */; };
 		001F46F120A3DB02006E07F1 /* SearchLinearList.m in Sources */ = {isa = PBXBuildFile; fileRef = 001F46F020A3DB02006E07F1 /* SearchLinearList.m */; };
 		00412D2120A9279D0084A22E /* HashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 00412D2020A9279D0084A22E /* HashTable.m */; };
 		00412D2420A95C230084A22E /* FuzzyMatching.m in Sources */ = {isa = PBXBuildFile; fileRef = 00412D2320A95C230084A22E /* FuzzyMatching.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		001B4B1520ABCC6200941209 /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		001B4B1620ABCC6200941209 /* LinkedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		001F46EF20A3DB02006E07F1 /* SearchLinearList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchLinearList.h; sourceTree = "<group>"; };
 		001F46F020A3DB02006E07F1 /* SearchLinearList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchLinearList.m; sourceTree = "<group>"; };
 		00412D1F20A9279D0084A22E /* HashTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
@@ -60,6 +63,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		001B4B1420ABCC0A00941209 /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				009CB9FA208DF3FB00B0C2C7 /* SequenceList.h */,
+				009CB9FB208DF3FB00B0C2C7 /* SequenceList.m */,
+				001B4B1520ABCC6200941209 /* LinkedList.h */,
+				001B4B1620ABCC6200941209 /* LinkedList.m */,
+			);
+			path = DataStructure;
+			sourceTree = "<group>";
+		};
 		009CB9D7208DF3A800B0C2C7 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +93,7 @@
 		009CB9E2208DF3A800B0C2C7 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				001B4B1420ABCC0A00941209 /* DataStructure */,
 				009CB9F9208DF3B400B0C2C7 /* Algorithms */,
 				009CB9E3208DF3A800B0C2C7 /* AppDelegate.h */,
 				009CB9E4208DF3A800B0C2C7 /* AppDelegate.m */,
@@ -96,8 +111,6 @@
 		009CB9F9208DF3B400B0C2C7 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
-				009CB9FA208DF3FB00B0C2C7 /* SequenceList.h */,
-				009CB9FB208DF3FB00B0C2C7 /* SequenceList.m */,
 				00B49A5A209C28C3007C2B8E /* Recursion.h */,
 				00B49A5B209C28C3007C2B8E /* Recursion.m */,
 				00EC0073209FEFA600415222 /* Sorts.h */,
@@ -193,6 +206,7 @@
 				00412D2120A9279D0084A22E /* HashTable.m in Sources */,
 				00412D2420A95C230084A22E /* FuzzyMatching.m in Sources */,
 				004513D120A571AD002347CA /* BitSet.m in Sources */,
+				001B4B1720ABCC6200941209 /* LinkedList.m in Sources */,
 				00B49A5C209C28C3007C2B8E /* Recursion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

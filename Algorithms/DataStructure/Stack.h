@@ -8,6 +8,4 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Stack : NSObject
-
-@end
+void createStack(void);

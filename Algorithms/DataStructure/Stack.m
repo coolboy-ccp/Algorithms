@@ -102,9 +102,54 @@ void createStack() {
 typedef struct Node {
     char data[10];
     struct Node *next;
-}Node, *List;
+}Node;
 
-void initNode(char *content) {
-    
+typedef struct LinkedStack {
+    Node *head;
+    int size;
+}LinkedStack;
+
+Node *initNode(char *content) {
+    Node *node = malloc(sizeof(Node));
+    if (node) {
+        strcat(node->data, content);
+        node->next = NULL;
+    }
+    return node;
+}
+
+LinkedStack *initLinkedStack() {
+    LinkedStack *stack = malloc(sizeof(LinkedStack));
+    if (stack) {
+        stack->size = 0;
+        stack->head = NULL;
+    }
+    return stack;
+}
+
+void linked_push(LinkedStack **stack,char *content) {
+    Node *node = initNode(content);
+    if ((*stack)->size > max) return;
+    if (node == NULL) return;
+    if ((*stack) == NULL) {
+        (*stack) = initLinkedStack();
+        (*stack)->head = node;
+    }
+    else {
+        Node *tmp = (*stack)->head;
+        while (tmp->next) tmp = tmp->next;
+        tmp->next = node;
+    }
+    (*stack)->size ++;
+}
+
+Node *linked_pop(LinkedStack **stack) {
+    if ((*stack) == NULL) return NULL;
+    Node *top = (*stack)->head;
+    Node *last = (*stack)->head;
+    while (top->next) top = top->next;
+    while (last->next->next) last->next = NULL;
+    (*stack)->size --;
+    return top;
 }
 

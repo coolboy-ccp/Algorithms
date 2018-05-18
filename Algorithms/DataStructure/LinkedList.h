@@ -12,4 +12,5 @@ void createSinglyList(void);
 void testSLChange(void);
 void testSLFind(void);
 void testSLDelete(void);
+void createCycleList(void);
 

@@ -39,7 +39,7 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
         NSArray *searchLinearListTest = @[@"order", @"binary", @"block"];
         NSArray *bitset = @[@"bitset", @"multiBitset", @"emptyBitset"];
         NSArray *fuzzyTest = @[@"getNext", @"KMP"];
-        NSArray *linkedlistText = @[@"singlyList", @"slChange", @"slDelete", @"slFind"];
+        NSArray *linkedlistText = @[@"singlyList", @"slChange", @"slDelete", @"slFind",@"cycleList"];
         _tests = @[@{@"sequence":sequenceTest},@{@"recursion":recursionTest},@{@"sort":sortTest},@{@"searchLinerarList":searchLinearListTest},@{@"bitset": bitset}, @{@"fuzzy":fuzzyTest}, @{@"linkedList": linkedlistText}];
     }
     return _tests;
@@ -53,7 +53,7 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
         NSArray *searchLinearListActions = @[^{testOrderSearch();}, ^{testBinarySearch();}, ^{testBlockSearch();}];
         NSArray *bitsetActions = @[^{testBitSet();}, ^{testMultiBitSet();}, ^{testEmptyNum();}];
         NSArray *fuzzyActions = @[^{testGetNext();}, ^{testKMFMatch();}];
-        NSArray *linkedListActions = @[^{createSinglyList();}, ^{testSLChange();}, ^{testSLDelete();}, ^{testSLFind();}];
+        NSArray *linkedListActions = @[^{createSinglyList();}, ^{testSLChange();}, ^{testSLDelete();}, ^{testSLFind();}, ^{createCycleList();}];
         _testActions = @[sequenceActions,recursionActions,sortActions, searchLinearListActions, bitsetActions,fuzzyActions,linkedListActions];
     }
     return _testActions;

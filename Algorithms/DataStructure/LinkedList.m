@@ -10,7 +10,7 @@
 #include <stdio.h>
 
 
-/*****单向链表*******/
+/*****单链表*******/
 typedef struct SinglyListNote {
     int lid;
     char data[20];
@@ -342,3 +342,86 @@ DoubleListNote *double_find(DoubleList *list, int pos) {
     }
     return currentNote;
 }
+
+/****环形链表****/
+typedef struct cycleNode {
+    char data[10];
+    struct cycleNode *next;
+}CycleNode, *CycleList;
+
+CycleNode *cycleNode(char *data) {
+    CycleNode *node = malloc(sizeof(CycleNode));
+    if (node) {
+        strcat(node->data, data);
+        node->next = NULL;
+    }
+    return node;
+}
+
+void cycle_print(CycleList head) {
+    CycleList temp = head;
+    printf("cycleList: \n");
+    while (temp->next != head) {
+        printf("%s\n",temp->data);
+        temp = temp->next;
+    }
+    printf("%s\n",temp->data);
+}
+
+void insertNode(CycleList *head, int pos, char *content) {
+    if (*head == NULL) {
+        *head = cycleNode(content);
+        (*head)->next = *head;
+        return ;
+    }
+    CycleList insertNode = cycleNode(content);
+    if (insertNode == NULL) {
+        printf("insertNode: null node\n");
+        return ;
+    }
+    CycleList currentNode = *head;
+    if (pos <= 0) {
+        insertNode->next = *head;
+        while (currentNode->next != *head) {
+            currentNode = currentNode->next;
+        }
+        currentNode->next = insertNode;
+        insertNode->next = *head;
+        *head = insertNode;
+    }
+    else {
+        int startpos = 1;
+        while (startpos < pos) {
+            currentNode = currentNode->next;
+            startpos ++;
+        }
+        CycleList nextNode = currentNode->next;
+        currentNode->next = insertNode;
+        insertNode->next = nextNode;
+    }
+}
+
+//according to node's data
+CycleList findNode(CycleList head, char *content) {
+    CycleList temp = head;
+    do {
+        if (strcmp(temp->data, content) == 0) {
+            return temp;
+        }
+        temp = temp->next;
+    } while (temp->next != head);
+    return NULL;
+}
+
+void createCycleList() {
+    CycleList head = NULL;
+    for (int i = 0; i < 10; i ++) {
+        char str[10] = "";
+        sprintf(str, "cycle: %d",i);
+        insertNode(&head, i, str);
+    }
+    cycle_print(head);
+}
+
+
+

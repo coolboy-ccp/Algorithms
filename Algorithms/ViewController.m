@@ -22,6 +22,7 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
 @property (weak, nonatomic) IBOutlet UITableView *testTable;
 @property (nonatomic, strong) Test tests;
 @property (nonatomic, strong) TestAction testActions;
+@property (nonatomic, strong) UISelectionFeedbackGenerator *demo;
 @end
 
 @implementation ViewController
@@ -29,6 +30,7 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [_testTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"testCell"];
+    _demo = [[UISelectionFeedbackGenerator alloc] init];
 }
 
 - (Test)tests {
@@ -93,6 +95,11 @@ typedef NSArray <NSArray <void(^)(void)> *> * TestAction;
     [tableView deselectRowAtIndexPath:indexPath animated:true];
     void(^action)(void) = self.testActions[indexPath.section][indexPath.row];
     action();
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"didScroll");
+    [_demo selectionChanged];
 }
 
 

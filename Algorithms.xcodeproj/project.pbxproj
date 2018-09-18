@@ -28,6 +28,9 @@
 		00FFB2D6214F4DAB00C38E46 /* 2_3_4Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFB2D5214F4DAB00C38E46 /* 2_3_4Sum.swift */; };
 		00FFB2DE214F5B3D00C38E46 /* AlgorithmsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFB2DD214F5B3D00C38E46 /* AlgorithmsSwiftTests.swift */; };
 		00FFB2E5214F5B4F00C38E46 /* 2_3_4Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFB2D5214F4DAB00C38E46 /* 2_3_4Sum.swift */; };
+		00FFB2E8214FB2C300C38E46 /* HashFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFB2E7214FB2C300C38E46 /* HashFunctions.swift */; };
+		00FFB2E9214FB38A00C38E46 /* HashFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFB2E7214FB2C300C38E46 /* HashFunctions.swift */; };
+		00FFB2EB215093D300C38E46 /* BoyerMooreHorspool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FFB2EA215093D300C38E46 /* BoyerMooreHorspool.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,8 @@
 		00FFB2DB214F5B3D00C38E46 /* AlgorithmsSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithmsSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FFB2DD214F5B3D00C38E46 /* AlgorithmsSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsSwiftTests.swift; sourceTree = "<group>"; };
 		00FFB2DF214F5B3D00C38E46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00FFB2E7214FB2C300C38E46 /* HashFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashFunctions.swift; sourceTree = "<group>"; };
+		00FFB2EA215093D300C38E46 /* BoyerMooreHorspool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoyerMooreHorspool.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				00FFB2D5214F4DAB00C38E46 /* 2_3_4Sum.swift */,
+				00FFB2E7214FB2C300C38E46 /* HashFunctions.swift */,
+				00FFB2EA215093D300C38E46 /* BoyerMooreHorspool.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -293,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00FFB2EB215093D300C38E46 /* BoyerMooreHorspool.swift in Sources */,
 				00F425F820AEA801006BE51A /* Queue.m in Sources */,
 				009CB9E8208DF3A800B0C2C7 /* ViewController.m in Sources */,
 				00F425F220AEA6E9006BE51A /* Stack.m in Sources */,
@@ -305,6 +313,7 @@
 				00412D2120A9279D0084A22E /* HashTable.m in Sources */,
 				00412D2420A95C230084A22E /* FuzzyMatching.m in Sources */,
 				004513D120A571AD002347CA /* BitSet.m in Sources */,
+				00FFB2E8214FB2C300C38E46 /* HashFunctions.swift in Sources */,
 				000E30FC20AD84350069E007 /* Tree.m in Sources */,
 				001B4B1720ABCC6200941209 /* LinkedList.m in Sources */,
 				00B49A5C209C28C3007C2B8E /* Recursion.m in Sources */,
@@ -318,6 +327,7 @@
 			files = (
 				00FFB2DE214F5B3D00C38E46 /* AlgorithmsSwiftTests.swift in Sources */,
 				00FFB2E5214F5B4F00C38E46 /* 2_3_4Sum.swift in Sources */,
+				00FFB2E9214FB38A00C38E46 /* HashFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

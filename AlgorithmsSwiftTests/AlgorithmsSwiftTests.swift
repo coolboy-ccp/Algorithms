@@ -21,7 +21,6 @@ class AlgorithmsSwiftTests: XCTestCase {
     }
     
     func testExample() {
-        testFromIndex()
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
@@ -31,6 +30,17 @@ class AlgorithmsSwiftTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func test2_3_4Sum() {
+        testFromIndex()
+    }
+    
+    func testHashFunctions() {
+        let str = "abcdefgffwewfewjfiewjfeowfjewiofjewiofjewiojfewiojfifjief"
+        HashFunctions.sdbm(str)
+        HashFunctions.djb2(str)
+        print("system--🐯🐯", str.hashValue)
     }
     
 }

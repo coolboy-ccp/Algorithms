@@ -81,14 +81,14 @@ class Sum2_3_4 {
         let sorted = collection.sorted()
         var ret = [[T.Element]]()
         var l = sorted.startIndex
-        while l < sorted.endIndex {
+        Four: while l < sorted.endIndex {
             defer { sorted.formUnique(after: &l) }
             var ml = sorted.index(after: l)
-            while ml < sorted.endIndex {
+            Three: while ml < sorted.endIndex {
                 defer { sorted.formIndex(after: &ml) }
                 var m = sorted.index(after: ml)
                 var r = sorted.index(before: sorted.endIndex)
-                while m < r {
+                Two: while m < r {
                     let sum = sorted[l] + sorted[ml] + sorted[m] + sorted[r]
                     if sum == target {
                         ret.append([sorted[l], sorted[ml], sorted[m], sorted[r]])

@@ -21,6 +21,7 @@
 		009CB9F3208DF3A900B0C2C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9F2208DF3A900B0C2C7 /* main.m */; };
 		009CB9FC208DF3FB00B0C2C7 /* SequenceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9FB208DF3FB00B0C2C7 /* SequenceList.m */; };
 		00B49A5C209C28C3007C2B8E /* Recursion.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B49A5B209C28C3007C2B8E /* Recursion.m */; };
+		00CDF1BB21E44C2100C7CFFB /* VertifyBrackets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CDF1BA21E44C2100C7CFFB /* VertifyBrackets.swift */; };
 		00EC0075209FEFA600415222 /* Sorts.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EC0074209FEFA600415222 /* Sorts.m */; };
 		00F425F220AEA6E9006BE51A /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F425F120AEA6E9006BE51A /* Stack.m */; };
 		00F425F520AEA6FE006BE51A /* Heap.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F425F420AEA6FE006BE51A /* Heap.m */; };
@@ -70,6 +71,7 @@
 		009CB9FB208DF3FB00B0C2C7 /* SequenceList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SequenceList.m; sourceTree = "<group>"; };
 		00B49A5A209C28C3007C2B8E /* Recursion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recursion.h; sourceTree = "<group>"; };
 		00B49A5B209C28C3007C2B8E /* Recursion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recursion.m; sourceTree = "<group>"; };
+		00CDF1BA21E44C2100C7CFFB /* VertifyBrackets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertifyBrackets.swift; sourceTree = "<group>"; };
 		00EC0073209FEFA600415222 /* Sorts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sorts.h; sourceTree = "<group>"; };
 		00EC0074209FEFA600415222 /* Sorts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sorts.m; sourceTree = "<group>"; };
 		00F425F020AEA6E9006BE51A /* Stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			children = (
 				00FFB2D5214F4DAB00C38E46 /* 2_3_4Sum.swift */,
 				00FFB2E7214FB2C300C38E46 /* HashFunctions.swift */,
+				00CDF1BA21E44C2100C7CFFB /* VertifyBrackets.swift */,
 				00FFB2EA215093D300C38E46 /* BoyerMooreHorspool.swift */,
 			);
 			path = Swift;
@@ -312,6 +315,7 @@
 				009CB9E5208DF3A800B0C2C7 /* AppDelegate.m in Sources */,
 				00412D2120A9279D0084A22E /* HashTable.m in Sources */,
 				00412D2420A95C230084A22E /* FuzzyMatching.m in Sources */,
+				00CDF1BB21E44C2100C7CFFB /* VertifyBrackets.swift in Sources */,
 				004513D120A571AD002347CA /* BitSet.m in Sources */,
 				00FFB2E8214FB2C300C38E46 /* HashFunctions.swift in Sources */,
 				000E30FC20AD84350069E007 /* Tree.m in Sources */,

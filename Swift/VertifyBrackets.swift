@@ -9,6 +9,7 @@
 import UIKit
 
 class VertifyBrackets {
+    
     func vertify(_ str: String) -> Bool {
         var lefts = [Character]()
         
@@ -21,30 +22,22 @@ class VertifyBrackets {
             return true
         }
         
-        func extractedFunc(_ char: Character) {
+        func push(_ char: Character) -> Bool {
             if let left = lefts.last {
                 let lastIdx = "([{".firstIndex(of: left)!
                 let idx = "([{".firstIndex(of: char)!
                 guard idx < lastIdx else { return false }
             }
             lefts.append(char)
-        }
-        
-        func push(_ char: Character) -> Bool {
-            extractedFunc(char)
             return true
         }
         
         for char in str {
             if "({[".contains(char) {
-                if !push(char) {
-                    return false
-                }
+                if !push(char) { return false }
             }
             else if ")]}".contains(char) {
-                if !pop(char) {
-                    return false
-                }
+                if !pop(char) { return false }
             }
         }
         return true

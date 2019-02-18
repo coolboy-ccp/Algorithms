@@ -13,6 +13,7 @@
 		00412D2120A9279D0084A22E /* HashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 00412D2020A9279D0084A22E /* HashTable.m */; };
 		00412D2420A95C230084A22E /* FuzzyMatching.m in Sources */ = {isa = PBXBuildFile; fileRef = 00412D2320A95C230084A22E /* FuzzyMatching.m */; };
 		004513D120A571AD002347CA /* BitSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 004513D020A571AD002347CA /* BitSet.m */; };
+		00752F01221A7BBB009F5D32 /* FullPermutation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00752F00221A7BBB009F5D32 /* FullPermutation.swift */; };
 		009CB9E5208DF3A800B0C2C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9E4208DF3A800B0C2C7 /* AppDelegate.m */; };
 		009CB9E8208DF3A800B0C2C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 009CB9E7208DF3A800B0C2C7 /* ViewController.m */; };
 		009CB9EB208DF3A800B0C2C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009CB9E9208DF3A800B0C2C7 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		00412D2320A95C230084A22E /* FuzzyMatching.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuzzyMatching.m; sourceTree = "<group>"; };
 		004513CF20A571AD002347CA /* BitSet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitSet.h; sourceTree = "<group>"; };
 		004513D020A571AD002347CA /* BitSet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BitSet.m; sourceTree = "<group>"; };
+		00752F00221A7BBB009F5D32 /* FullPermutation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPermutation.swift; sourceTree = "<group>"; };
 		009CB9E0208DF3A800B0C2C7 /* Algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		009CB9E3208DF3A800B0C2C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		009CB9E4208DF3A800B0C2C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				00FFB2D5214F4DAB00C38E46 /* 2_3_4Sum.swift */,
+				00752F00221A7BBB009F5D32 /* FullPermutation.swift */,
 				00FFB2E7214FB2C300C38E46 /* HashFunctions.swift */,
 				00CDF1BA21E44C2100C7CFFB /* VertifyBrackets.swift */,
 				00FFB2EA215093D300C38E46 /* BoyerMooreHorspool.swift */,
@@ -310,6 +313,7 @@
 				001F46F120A3DB02006E07F1 /* SearchLinearList.m in Sources */,
 				009CB9F3208DF3A900B0C2C7 /* main.m in Sources */,
 				00FFB2D6214F4DAB00C38E46 /* 2_3_4Sum.swift in Sources */,
+				00752F01221A7BBB009F5D32 /* FullPermutation.swift in Sources */,
 				009CB9FC208DF3FB00B0C2C7 /* SequenceList.m in Sources */,
 				00EC0075209FEFA600415222 /* Sorts.m in Sources */,
 				009CB9E5208DF3A800B0C2C7 /* AppDelegate.m in Sources */,
